@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ platform_info.name }} - {{ platform_info.version }}</title>
+    <style>
+        :root {
+            --primary: #00ff88;
+            --secondary: #00d4ff;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --light: #ffffff;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, var(--darker) 60%, var(--dark) 100%);
+            color: var(--light);
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--dark);
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        header .version {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 900px;
+            margin: -2rem auto 2rem auto;
+            background: rgba(20, 20, 20, 0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.42);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .platform-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .platform-meta > div {
+            margin: 0.5rem 0;
+        }
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: linear-gradient(120deg, var(--dark) 70%, var(--secondary) 100%);
+            border-radius: 12px;
+            padding: 1.3rem 1.8rem;
+            flex: 1;
+            text-align: center;
+            color: var(--light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .stat-card .stat-value {
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+        .stat-card .stat-label {
+            font-size: 1.08rem;
+            margin-top: 0.4rem;
+            opacity: 0.85;
+        }
+        .industries-section {
+            margin-bottom: 2rem;
+        }
+        .industries-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .industry-pill {
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+            color: var(--dark);
+            border-radius: 20px;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .footer {
+            text-align: center;
+            color: #aaa;
+            margin-top: 3rem;
+            font-size: 0.98rem;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 1.2rem 0.4rem; }
+            .stats { flex-direction: column; gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ platform_info.name }}</h1>
+        <div class="version">Version {{ platform_info.version }}</div>
+    </header>
+    <div class="container">
+        <div class="platform-meta">
+            <div>
+                <strong>Creator:</strong> {{ platform_info.creator }}
+            </div>
+            <div>
+                <strong>Contact:</strong> <a href="mailto:{{ platform_info.contact }}" style="color:var(--primary);text-decoration:none;">{{ platform_info.contact }}</a>
+            </div>
+            <div>
+                <strong>&copy; {{ platform_info.copyright }}</strong>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">{{ project_count }}</div>
+                <div class="stat-label">Total Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">{{ features_count }}</div>
+                <div class="stat-label">Active Features</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">{{ industries|length }}</div>
+                <div class="stat-label">Supported Industries</div>
+            </div>
+        </div>
+        <div class="industries-section">
+            <h2>Industries Supported</h2>
+            <div class="industries-list">
+                {% for industry in industries %}
+                    <span class="industry-pill">{{ industry|capitalize }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div style="margin-top:2.5rem;">
+            <h3>Welcome to the Universal Developer Platform with Complete AI Integration</h3>
+            <p>
+                Mito Engine is a next-generation multi-industry project management and advanced file processing platform, powered by AI. Enjoy seamless project creation, robust file analytics, and real-time insights for software, AI/ML, media, healthcare, and finance projects.
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        {{ platform_info.name }} &mdash; v{{ platform_info.version }}<br>
+        {{ platform_info.copyright }}
+    </div>
+</body>
+</html>

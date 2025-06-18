@@ -1,0 +1,47 @@
+# MitoAI Platform - Professional Dependencies
+# Creator: Daniel Guzman - guzman.daniel@outlook.com
+# Copyright: 2025 Daniel Guzman - All Rights Reserved
+
+# Core Framework
+Flask==2.3.3
+flask-cors==4.0.0
+
+# AI Integration
+openai==0.28.1
+
+# HTTP Requests
+requests==2.31.0
+
+# Environment Management
+python-dotenv==1.0.0
+
+# Production Server
+gunicorn==21.2.0
+
+# Security
+cryptography==41.0.3
+
+# Database (when needed)
+Flask-SQLAlchemy==3.0.5
+psycopg2-binary==2.9.7
+
+# Caching
+Flask-Caching==2.1.0
+
+# Rate Limiting
+Flask-Limiter==3.5.0
+
+# JSON Web Tokens
+PyJWT==2.8.0
+
+# Date/Time Utilities
+python-dateutil==2.8.2
+
+# File Processing
+Pillow==10.0.0
+
+# Configuration Management
+pydantic==2.3.0
+
+# Logging
+structlog==23.1.0
