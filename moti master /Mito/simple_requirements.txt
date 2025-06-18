@@ -1,0 +1,7 @@
+# MitoAI Platform - Simple Requirements
+# Creator: Daniel Guzman - guzman.daniel@outlook.com
+# Only the essentials for beginners
+
+Flask==2.3.3
+openai==0.28.1
+python-dotenv==1.0.0

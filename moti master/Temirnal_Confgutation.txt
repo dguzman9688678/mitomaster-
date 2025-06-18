@@ -1,0 +1,75 @@
+
+MITO DEV ENGINE v1.0 - TERMINAL MODE
+[Daniel Guzman Build | Free Tier | AI Ready]
+
+What would you like to build today?
+[1] Website
+[2] API
+[3] Script
+[4] AI Agent
+[5] Web App
+[6] Mobile App
+[7] Full App
+[8] Code Generator
+[9] Custom Agent
+[10] File Converter
+[11] Tools
+[12] Settings
+[13] API Endpoint
+[14] Upload/Download Manager
+[15] Full Deployment Control
+[16] Extensions & Integrations
+[17] Docker Engine
+[18] External Sources Connector
+[19] AI Connector - Use Any AI
+[20] Memory Manager - Episodic / Procedural / Semantic
+
+# Type the number of the option you want, then press ENTER.
+# After each command, the full menu will always be displayed again for clarity.
+
+
+Settings Toggles:
+
+[01] Enable LLaMA Mode
+[02] Enable Vertex AI Mode
+[03] Enable OpenAI Mode
+[04] Enable Offline AI Only: ON/OFF
+[05] Enable Local Transformers (HuggingFace): ON/OFF
+[06] Enable Prompt-to-Test Generator: ON/OFF
+[07] Enable Voice Input: ON/OFF
+[08] Enable Voice Output: ON/OFF
+[09] Enable Custom AI Connections: ON/OFF
+[10] Enable Memory System: ON/OFF
+[11] Enable API Access: ON/OFF
+[12] Enable Deployment Features: ON/OFF
+[13] Enable GitHub Deployment: ON/OFF
+[14] Enable Free Cloud Services: ON/OFF
+[15] Enable Docker Engine: ON/OFF
+[16] Enable GitHub CLI Integration: ON/OFF
+[17] Enable ngrok for URL Sharing: ON/OFF
+[18] Enable External Source Connection: ON/OFF
+[19] Enable File Upload/Download: ON/OFF
+[20] Choose File Upload Path: ON/OFF
+[21] Choose File Download Path: ON/OFF
+[22] Enable CLI Extensions: ON/OFF
+[23] Enable Terminal Styling (Rich): ON/OFF
+[24] Enable Code Formatting (Black, Flake8): ON/OFF
+[25] Developer Style: Minimal | Sarcastic | Hype | AI Assistant
+[26] Save/Load Session: ON/OFF
+[27] Track Recent Projects: ON/OFF
+[28] Use Prompt Library: ON/OFF
+[29] Custom Commands: ON/OFF
+[30] Enable Full Project Creation: ON/OFF
+[31] Access All Deployment Site Functions: ON/OFF
+
+
+
+{
+  "voice_input": true,
+  "voice_output": false,
+  "use_llama": true,
+  "enable_memory": true,
+  "enable_terminal_styling": false,
+  "deployment_mode": "manual",
+  "developer_style": "Minimal"
+}
